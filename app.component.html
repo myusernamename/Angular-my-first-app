@@ -1,0 +1,57 @@
+<div class="continer">
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8">
+            <ul class="nav nav-tabs">
+
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('home')"> Home </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('properties')"> Properties </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('accounts')"> Accounts </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('users')"> Users </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('login')"> LogIn </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" (click)="goTo('servers')"> Servers </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="displayMenu == 'home'">
+        <div class="col-sm-10 col-md-8">
+            <app-home> </app-home>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="displayMenu == 'properties'">
+        <div class="col-sm-10 col-md-8">
+            <app-properties> </app-properties>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="displayMenu == 'users'">
+        <div class="col-sm-10 col-md-8">
+            <app-users> </app-users>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="displayMenu == 'accounts'">
+        <div class="col-sm-10 col-md-8">
+            <app-accounts> </app-accounts>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="displayMenu == 'login'">
+        <div class="col-sm-10 col-md-8">
+            <app-login> </app-login>
+        </div>
+    </div>
+</div>
